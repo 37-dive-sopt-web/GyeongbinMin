@@ -75,11 +75,7 @@ body {
 .header {
     position: fixed;
     top: 0;
-<<<<<<< HEAD
-    left: 280px; 
-=======
-    left: 282px; 
->>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
+    left: 280px;
     right: 0;
     z-index: 1000;
     background: #fff;
