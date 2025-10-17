@@ -62,8 +62,7 @@ body {
 
 /* 메인 콘텐츠 */
 .main-content {
-    margin-left: 282px; /* 250px + 32px (margin + border) */
-    background: #fff;
+    margin-left: 280px; 
     min-height: 100vh;
 }
 
@@ -71,7 +70,7 @@ body {
 .header {
     position: fixed;
     top: 0;
-    left: 282px; /* 250px + 32px (margin + border) */
+    left: 280px; 
     right: 0;
     z-index: 1000;
     background: #fff;
@@ -156,7 +155,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    /* Ensure the avatar is fully visible below the header */
+   ₩
     margin-top: 0;
     margin-bottom: 2rem;
     border: 4px solid rgba(255, 255, 255, 0.3);
