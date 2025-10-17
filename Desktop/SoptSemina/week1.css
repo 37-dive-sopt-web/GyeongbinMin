@@ -62,12 +62,8 @@ body {
 
 /* 메인 콘텐츠 */
 .main-content {
-<<<<<<< HEAD
     margin-left: 280px; 
-=======
-    margin-left: 282px;
     background: #fff;
->>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
     min-height: 100vh;
 }
 
@@ -160,11 +156,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-<<<<<<< HEAD
-   ₩
-=======
    
->>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
     margin-top: 0;
     margin-bottom: 2rem;
     border: 4px solid rgba(255, 255, 255, 0.3);
