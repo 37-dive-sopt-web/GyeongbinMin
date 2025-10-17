@@ -62,7 +62,12 @@ body {
 
 /* 메인 콘텐츠 */
 .main-content {
+<<<<<<< HEAD
     margin-left: 280px; 
+=======
+    margin-left: 282px;
+    background: #fff;
+>>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
     min-height: 100vh;
 }
 
@@ -70,7 +75,11 @@ body {
 .header {
     position: fixed;
     top: 0;
+<<<<<<< HEAD
     left: 280px; 
+=======
+    left: 282px; 
+>>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
     right: 0;
     z-index: 1000;
     background: #fff;
@@ -142,7 +151,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Position content just below the fixed header */
+
     margin-top: 80px;
 }
 
@@ -155,7 +164,11 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+<<<<<<< HEAD
    ₩
+=======
+   
+>>>>>>> 752f4c10ad0193d59bb999204261448ef01d1195
     margin-top: 0;
     margin-bottom: 2rem;
     border: 4px solid rgba(255, 255, 255, 0.3);
