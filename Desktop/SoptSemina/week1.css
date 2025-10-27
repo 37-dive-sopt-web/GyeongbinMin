@@ -230,6 +230,8 @@ body {
     justify-content: center;
     max-width: 80rem;
     margin: 0 auto;
+    list-style: none;
+    padding: 0;
 }
 
 .skill-tag {
@@ -240,6 +242,7 @@ body {
     font-size: 0.9rem;
     border: 1px solid #e9ecef;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
 .skill-tag:hover {
