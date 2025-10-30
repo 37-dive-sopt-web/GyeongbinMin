@@ -8,12 +8,14 @@
 </head>
 
 <body>
+  <!-- 헤더 영역 -->
   <header>
     <div class="header-left">👽</div>
     <h1 class="header-title">웹계인 관리 페이지</h1>
     <div class="header-right">웹 파트 37기 YB 민경빈</div>
   </header>
 
+  <!-- 필터 영역 -->
   <main>
   <section class="filter-container">
   <h3 class="filter-title">검색 필터</h3>
@@ -54,8 +56,6 @@
           </select>
         </div>
       </div>
-  
-      
       <div class="filter-row grid">
         <div class="form-group">
           <label for="group">금잔디조</label>
@@ -67,8 +67,6 @@
           <input type="number" id="age" placeholder="나이를 입력하세요" />
         </div>
       </div>
-  
- 
       <div class="form-buttons">
         <button type="submit" class="apply-btn">적용</button>
         <button type="reset" class="reset-btn">초기화</button>
@@ -85,7 +83,6 @@
         <button class="add-btn" id="openModalBtn">추가</button> 
       </div>
     </div>
-
     <table id="memberTable">
       <thead>
         <tr>
@@ -106,14 +103,13 @@
   </section>
 </main>
 
-
+  <!-- 모달 영역 (기본속성  display: none;) -->
   <div id="addModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h3>멤버 추가</h3>
         <button type="button" class="close-modal">&times;</button>
       </div>
-
       <form id="addForm" class="modal-form">
         <div class="form-grid">
           <label>이름
@@ -128,8 +124,8 @@
           <label>성별
             <select id="addGender" required>
               <option value="">선택</option>
-              <option value="남자">남자</option>
-              <option value="여자">여자</option>
+              <option value="male">남자</option>
+              <option value="female">여자</option>
             </select>
           </label>
           <label>역할
