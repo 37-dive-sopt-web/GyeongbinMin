@@ -1,11 +1,15 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Header from "./components/Header";
+import GamePage from "./pages/GamePage";
+import RankingPage from "./pages/RankingPage";
 
 function App() {
+  const[tab , setTab] = useState ("game");
   return (
-    <div className="bg-red-500 text-white text-2xl p-4">Tailwind 테스트 ✅</div>
+    <div>
+      <Header tab={tab} setTab={setTab} />
+      {tab === "game" ? <GamePage /> : <RankingPage />}
+    </div>
   );
 }
 
