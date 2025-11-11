@@ -9,7 +9,6 @@ const GameBoard = ({ cards, flippedCards, matchedCards, onCardClick, disabled })
       ? "grid-cols-6"
       : "grid-cols-4";
 
-
   return (
     <div className={`grid ${gridCols} gap-2 max-w-2xl mx-auto`}>
       {cards.map((card, index) => {

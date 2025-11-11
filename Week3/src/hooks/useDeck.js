@@ -14,5 +14,3 @@ export function useDeck(level) {
 
   return { cards, setCards, regenerate };
 }
-
-

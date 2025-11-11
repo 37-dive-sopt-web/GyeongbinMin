@@ -16,5 +16,3 @@ const StatsPanel = ({ timeLeft, successfulPairs, totalPairs, remainingPairs }) =
 };
 
 export default StatsPanel;
-
-

@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-// Countdown timer hook with fractional seconds support
-// stepSeconds: e.g., 0.1 for 100ms ticks
 export function useCountdown(initialSeconds = 45, stepSeconds = 0.1, onFinish) {
   const [timeLeft, setTimeLeft] = useState(initialSeconds);
   const [isRunning, setIsRunning] = useState(false);
@@ -12,7 +10,6 @@ export function useCountdown(initialSeconds = 45, stepSeconds = 0.1, onFinish) {
     latestOnFinish.current = onFinish;
   }, [onFinish]);
 
-  // Reset when initialSeconds changes
   useEffect(() => {
     setTimeLeft(initialSeconds);
     setIsRunning(false);
@@ -36,7 +33,6 @@ export function useCountdown(initialSeconds = 45, stepSeconds = 0.1, onFinish) {
       setTimeLeft((prev) => {
         const next = Math.max(0, +(prev - stepSeconds).toFixed(1));
         if (next <= 0) {
-          // stop and fire finish
           clear();
           setIsRunning(false);
           if (latestOnFinish.current) latestOnFinish.current();
@@ -63,5 +59,3 @@ export function useCountdown(initialSeconds = 45, stepSeconds = 0.1, onFinish) {
 
   return { timeLeft, isRunning, start, pause, reset, setTimeLeft, setIsRunning };
 }
-
-

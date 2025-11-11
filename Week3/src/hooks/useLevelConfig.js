@@ -11,5 +11,3 @@ export function useLevelConfig(initialLevel = 1) {
 
   return { level, setLevel, timeLimit };
 }
-
-

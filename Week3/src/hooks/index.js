@@ -4,5 +4,6 @@ export { useDeck } from "./useDeck";
 export { useMatchEngine } from "./useMatchEngine";
 export { useAutoReset } from "./useAutoReset";
 export { useLevelConfig } from "./useLevelConfig";
+export { useRanking } from "./useRanking";
 
 

@@ -15,5 +15,3 @@ const LevelSelect = ({ level, onChange }) => {
 };
 
 export default LevelSelect;
-
-

@@ -20,5 +20,3 @@ export function useAutoReset() {
 
   return { scheduleReset, clear };
 }
-
-

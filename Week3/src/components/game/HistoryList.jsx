@@ -26,5 +26,3 @@ const HistoryList = ({ items }) => {
 };
 
 export default HistoryList;
-
-

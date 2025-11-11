@@ -16,5 +16,3 @@ export function useHistory(maxItems = 10) {
 
   return { items, add, reset, setItems };
 }
-
-

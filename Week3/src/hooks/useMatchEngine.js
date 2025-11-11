@@ -22,22 +22,22 @@ export function useMatchEngine() {
 
       if (newFlipped.length === 2) {
         setIsProcessing(true);
-        const [aIdx, bIdx] = newFlipped;
-        const a = cards[aIdx];
-        const b = cards[bIdx];
-        const success = a.value === b.value;
+        const [firstIndex, secondIndex] = newFlipped;
+        const firstCard = cards[firstIndex];
+        const secondCard = cards[secondIndex];
+        const isMatch = firstCard.value === secondCard.value;
 
-        if (success) {
-          if (onPairResult) onPairResult(a.value, b.value, true);
+        if (isMatch) {
+          if (onPairResult) onPairResult(firstCard.value, secondCard.value, true);
           setMatchedCards((prev) => {
-            const next = [...prev, aIdx, bIdx];
+            const next = [...prev, firstIndex, secondIndex];
             if (onAllMatched && next.length / 2 >= cards.length / 2) onAllMatched();
             return next;
           });
           setFlippedCards([]);
           setIsProcessing(false);
         } else {
-          if (onPairResult) onPairResult(a.value, b.value, false);
+          if (onPairResult) onPairResult(firstCard.value, secondCard.value, false);
           setTimeout(() => {
             setFlippedCards([]);
             setIsProcessing(false);
@@ -56,5 +56,3 @@ export function useMatchEngine() {
     reset,
   };
 }
-
-
