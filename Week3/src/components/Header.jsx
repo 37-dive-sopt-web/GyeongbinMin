@@ -29,7 +29,7 @@ const Header = ({ tab, setTab }) => {
           </div>
     
       </header>
-    );
+    )
   };
   
   export default Header;
