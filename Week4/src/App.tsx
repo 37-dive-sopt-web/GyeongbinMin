@@ -1,19 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+import { AppRouter } from './app/router';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <h1>Vite + React + TypeScript + Vanilla Extract</h1>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is: {count}
-        </button>
-      </div>
-    </>
-  )
+  return <AppRouter />;
 }
 
-export default App
+export default App;
