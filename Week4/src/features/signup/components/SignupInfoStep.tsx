@@ -24,6 +24,7 @@ type SignupInfoStepProps = {
   onSubmit: () => void;
   onBack: () => void;
   isLoading?: boolean;
+  canSubmit?: boolean;
 };
 
 export const SignupInfoStep = ({
@@ -36,6 +37,7 @@ export const SignupInfoStep = ({
   onSubmit,
   onBack,
   isLoading = false,
+  canSubmit = false,
 }: SignupInfoStepProps) => {
   return (
     <div className={signupPageStyle}>
@@ -77,7 +79,7 @@ export const SignupInfoStep = ({
           <Button
             type="button"
             onClick={onSubmit}
-            disabled={isLoading}
+            disabled={isLoading || !canSubmit}
             className={signupSubmitButtonStyle}
           >
             회원가입

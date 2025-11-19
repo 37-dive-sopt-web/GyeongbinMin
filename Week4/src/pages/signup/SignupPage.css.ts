@@ -29,7 +29,7 @@ export const backButtonStyle = style({
   cursor: 'pointer',
   padding: '0.5rem',
   marginBottom: '1rem',
-  color: '#4FD1C7',
+  color: '#3b82f6 ',
 });
 
 export const titleStyle = style({
@@ -99,7 +99,7 @@ export const nextButtonStyle = style({
 export const signupSubmitButtonStyle = style({
   width: '100%',
   marginBottom: '1rem',
-  backgroundColor: '#4FD1C7',
+  backgroundColor: '#3b82f6',
   color: '#fff',
   padding: '0.875rem',
   borderRadius: '0.5rem',
@@ -110,7 +110,7 @@ export const signupSubmitButtonStyle = style({
   transition: 'background-color 0.2s',
   selectors: {
     '&:hover:not(:disabled)': {
-      backgroundColor: '#38B2AC',
+      backgroundColor: '#2563eb',
     },
     '&:disabled': {
       opacity: 0.5,
@@ -127,7 +127,7 @@ export const linkStyle = style({
 });
 
 export const linkAnchorStyle = style({
-  color: '#4FD1C7',
+  color: '#3b82f6 ',
   textDecoration: 'none',
   fontWeight: 600,
 });

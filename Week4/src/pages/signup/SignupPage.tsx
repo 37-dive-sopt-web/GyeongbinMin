@@ -31,6 +31,8 @@ export const SignupPage = () => {
     if (result?.success) {
       alert(`${result.name}님, 회원가입이 완료되었습니다!`);
       navigate('/login');
+    } else {
+      alert('회원가입에 실패했습니다. 다시 시도해주세요.');
     }
   };
 
@@ -64,6 +66,7 @@ export const SignupPage = () => {
   }
 
   if (step === 'info') {
+    const canSubmit = data.name.trim().length > 0 && data.email.trim().length > 0 && data.age.trim().length > 0;
     return (
       <SignupInfoStep
         name={data.name}
@@ -75,6 +78,7 @@ export const SignupPage = () => {
         onSubmit={handleSubmit}
         onBack={handleBack}
         isLoading={isLoading}
+        canSubmit={canSubmit}
       />
     );
   }
