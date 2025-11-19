@@ -43,11 +43,17 @@ export const useSignup = () => {
         age: Number(data.age),
       };
 
-      await signup(userData);
-      return { success: true, name: data.name };
+      const response = await signup(userData);
+
+      if (response.success && response.data) {
+        return { success: true, name: response.data.name };
+      } else {
+        setError(response.message || '회원가입에 실패했습니다.');
+        return { success: false };
+      }
     } catch (err: unknown) {
       if (err && typeof err === 'object' && 'response' in err) {
-        const response = (err as { response?: { data?: unknown; status?: number } }).response;
+        const response = (err as { response?: { data?: unknown } }).response;
         const errorData = response?.data;
 
         if (errorData && typeof errorData === 'object') {
@@ -69,7 +75,11 @@ export const useSignup = () => {
 
           if (serverError.message) {
             setError(serverError.message);
+          } else {
+            setError('회원가입에 실패했습니다.');
           }
+        } else {
+          setError('회원가입에 실패했습니다.');
         }
       } else {
         setError('회원가입에 실패했습니다.');
