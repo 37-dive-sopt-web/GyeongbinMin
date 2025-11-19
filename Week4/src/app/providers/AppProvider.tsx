@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import '../shared/ui';
+import type { ReactNode } from 'react';
+import '../styles';
 
 type AppProviderProps = {
   children: ReactNode;

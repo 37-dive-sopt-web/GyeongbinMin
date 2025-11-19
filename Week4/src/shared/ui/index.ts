@@ -1,4 +1,2 @@
-export { Button } from './Button';
-export { Input } from './Input';
-export { theme, vars } from './theme.css';
-export './global.css';
+export { Button } from './button/Button';
+export { Input } from './input/Input';
