@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Input } from '../../shared/ui';
+import { useAuth } from '../../features/auth';
 import { loginPageStyle, formStyle, titleStyle, formContainerStyle, inputGroupStyle, labelStyle, passwordWrapperStyle, passwordToggleButtonStyle, submitButtonStyle, signupButtonStyle, errorStyle } from './LoginPage.css.ts';
 
 export const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { handleLogin, isLoading, error } = useAuth();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    await handleLogin(username, password);
   };
 
   return (
@@ -46,8 +48,8 @@ export const LoginPage = () => {
               </button>
             </div>
           </div>
-          <Button type="submit" className={submitButtonStyle}>
-            로그인
+          <Button type="submit" className={submitButtonStyle} disabled={isLoading}>
+            {isLoading ? '로그인 중...' : '로그인'}
           </Button>
         </form>
         <Link to="/signup" style={{ textDecoration: 'none' }}>

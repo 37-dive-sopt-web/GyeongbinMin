@@ -6,3 +6,4 @@ export type User = {
     email: string;
     age: number;
 };
+
