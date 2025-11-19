@@ -35,7 +35,7 @@ export const UserLookupPage = () => {
           <label className={labelStyle}>회원 ID</label>
 
           <Input
-            type="number"
+            type="text"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
             placeholder="회원 ID를 입력하세요"
